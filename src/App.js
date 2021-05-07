@@ -1,34 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React from 'react';
+import { View, Text } from 'react-native';
 
- import 'react-native-gesture-handler';
- import React from 'react';
- import { Provider } from 'react-redux';
- import { PersistGate } from 'redux-persist/integration/react';
- 
- import createStore from './Redux/CreateStore';
- import MainNavigation from './Modules/Navigation/MainNavigation';
- 
- 
- const { store, persistor } = createStore();
- 
- const App = () => {
- 
-   return (
-     <Provider store={store}>
-       <PersistGate loading={null} persistor={persistor}>
-         <MainNavigation />
-       </PersistGate>
-     </Provider>
-   );
- 
- };
- 
- export default App;
+const App = () => {
+  return (
+    <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>Pill Tracker</Text>
+    </View>
+  )
+}
+
+export default App;
  
  
