@@ -1,13 +1,15 @@
 // Packages
 import { combineReducers } from 'redux';
+import {userReducer, USER_NAMESPACE} from '../Modules/Auth/Redux/UserRedux'
 
 // Reducers
-import { ThemeReducer } from '../Modules/Theming';
-import { LocalizationReducer } from '../Modules/Localization';
+import { ThemeReducer, THEMING_NAMAESPACE } from '../Modules/Theming';
+import { LocalizationReducer, LOCALIZATION_NAMESPACE } from '../Modules/Localization';
 
 export default combineReducers({
-  theme: ThemeReducer,
-  localization: LocalizationReducer,
+  [USER_NAMESPACE]: userReducer,
+  [THEMING_NAMESPACE]: ThemeReducer,
+  [LOCALIZATION_NAMESPACE]: LocalizationReducer,
 });
 
 
